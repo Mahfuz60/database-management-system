@@ -1,16 +1,19 @@
 #Defination
+--------------------
 Database:
 ->information
 ->organized
 ->computer based(eletronics)
  
 #type of database
+----------------------
 
 database are two types
 1.relational database
 2.non relational database
 
 #relational database:
+----------------------------
 one table content make a relation other table datab
 for example:
 table class
@@ -25,6 +28,7 @@ roll------cgpa
 there are relation are class and result table this called relational database
 
 #non relational database:
+-----------------------------
 no relation two other table data or document
 table class
 name----roll----gpa
@@ -39,6 +43,96 @@ there are no relation two table this called non relational database
 
 
 #Database property
+---------------------
 ->field
 ->record
 ->values(data)
+
+-----------------------
+name |roll |age     ----------->one kind of field
+-----------------------
+rahim| 1001 |24     ------------>record
+-----------------------
+karim |1002 |23     ------------>record
+--------------------
+ahmed |1003 |25     ------------>record
+-------------------
+->every row data are called record
+->every column data are called field
+->every cell property data are called values(data)
+for example: rahim,1001,24
+
+#table and keys
+--------------------
+->every field are called key
+
+#keys are three types
+1.primary key
+2.composite primary key
+3.foreign key
+
+
+#primary key
+-------------
+->one data table are unique property filed attend this is called primary key
+for example: student roll,customer id
+
+#composite primary key
+-------------------------
+->two or more filed consider to primary key  this key are called composite primary key
+for example:
+(CSE-101,DU),(CSE-101,BUET)
+->there are used two type of data but one filed is diffent  main course are similer name but university are different
+
+#foreign key
+-------------
+->one table primary key used in other table this key are called foreign key
+for example:
+class table student roll-1,name-rahime,roll-3,name-karim
+other libaray table are used in class table primary key
+bookName:abc,studentRoll:1,bookName:xyz,studentRoll:2
+ ->two table are roll same 
+
+#Database Management system(DBMS)
+-----------------------------------
+->one kind of software mainly manage the data
+->data(unorganized way )/information(organized way) store in DBMS
+->hardware[computer,harddisk,memory card]
+->software[accces to hardware]
+->database user[all people are user,new site login,signup]
+->processing unit[all data added,update,stored  all kind of  process]
+
+#DBMS working procedure
+-------------------
+->create a new table
+->rename table
+->data are update ,delete
+->data query[searching ]
+
+#DBMS advantanges
+-------------------
+->organized way to store data
+->first searching data
+->parallel accessing[multiple user access]
+
+#DBMS usages
+----------------
+->online ticket purchases[bus,plane,train]
+->library Management
+->educational system
+->government service
+->large scale website
+
+#Relational Database Management system(RDBMS)
+---------------------------------------------------
+->multiple table data are Manage easily to RDBMS
+for example:
+libaray database are at a time manage student information,student libaray information,student semester information,stduent semester result information etc.
+
+#Database Relation
+---------------------
+Database realtion are three types:
+1.one to one relation
+2.one to many/many to one relation
+3.many to many realtion
+
