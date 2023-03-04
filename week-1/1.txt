@@ -1,0 +1,44 @@
+#Defination
+Database:
+->information
+->organized
+->computer based(eletronics)
+ 
+#type of database
+
+database are two types
+1.relational database
+2.non relational database
+
+#relational database:
+one table content make a relation other table datab
+for example:
+table class
+roll----name
+1--------A 
+2--------B 
+
+class table realtion to  result table
+roll------cgpa
+1---------3.00
+2---------3.50
+there are relation are class and result table this called relational database
+
+#non relational database:
+no relation two other table data or document
+table class
+name----roll----gpa
+rahim------1-----5
+karim----2-------4.50
+
+table doctor
+name-----degree
+dr.rahim----MBBS
+dr.karim-----FCPS
+there are no relation two table this called non relational database
+
+
+#Database property
+->field
+->record
+->values(data)
