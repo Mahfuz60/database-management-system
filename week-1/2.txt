@@ -1,0 +1,32 @@
+#Database Design Strategies
+---------------------------------
+Database design are two types
+1.Top down approach
+top----->Model
+.          .
+.          .
+.          .
+.          .
+           V   
+Bottom--->data
+2.Bottom up approach
+top----->Model
+           ^
+.          .
+.          .
+.          .
+.          .
+           
+Bottom--->data
+   
+   #Requiment analysis
+   ---------------------
+   ->patient Data
+   ->doctor data 
+   ->prescription
+   ->medicine details
+
+  #Pitfalls to avoid
+  ---------------------
+  ->Redundancy[unnecessary time repeate]
+  -> Lack of completeness
