@@ -30,3 +30,50 @@ Bottom--->data
   ---------------------
   ->Redundancy[unnecessary time repeate]
   -> Lack of completeness
+
+
+  #ER Diagram
+  ----------------
+  ER=Entity Relationship 
+  sortly called ERD->working as a Database Modeling
+ERD component
+--------------------
+1.Entity
+2.Attribute
+3.Relationship
+
+
+#Relationship
+--------------------
+1.connectivity[student table and teacher table are connected]
+2.cardinality
+-----------------
+i.one to one relation ->1:1
+[1 is left side data table and 1 is right side data table]
+ii.one to many relation ->1:N
+iii.many to many relation ->M:N
+
+#Partipations
+--------------------
+1.total participation[all student are atted the exam this is total participaitions]
+2.partial participations[90% student attend exam but 10% student did't attend exam this is callled partial participations]
+
+
+#Strong Entity
+---------------
+->Must be primary key defined
+
+#Weak Entity
+--------------------
+->Primary key not be defined
+->insert a primary key
+
+#Advanced Attribute Notation
+----------------------------------
+1.composite[ onk golu attribute thakte pare]
+2.multivalue[for example one person are multiple phone number used at a time ]
+->define to {phone number}
+3.derived[ for example person date of birth to calculate person age]
+->defined  age()
+
+

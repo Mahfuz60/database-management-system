@@ -1,0 +1,108 @@
+#Query Language,SQL
+-----------------------
+Query: Query Main that searching
+
+Type Of Query:
+--------------------
+1.Select Query
+->Suppose Student roll,id name,result 
+2.Parameter Query
+->Suppose 50k salary employee List searching
+3.CrossTab Query
+-> Collect to data summary/group  wise with the database
+4.Unmatch Query
+->somwthing searching but not matched this unmatch data showing
+5.Action Query
+->changing database something related work
+
+Action Query are four types
+----------------------------
+1.make table[create a new table]
+2.append[adding data in database]
+3.update [updating data in database]
+4.delete[removing data in database]
+
+
+Query Language
+-------------------
+Type Of Query Language:
+
+1.QUEL[Query Language]
+2.QBE[Query By Example]
+3.SQL[Structure Query Language]
+
+#SQL(Structure Query Language)
+----------------------------------
+Type of SQL:
+1.DML[Data Manipulation Language]=>Data Select,update,delete,update
+2.DDL[Data Definition Language]=>create table,Schama,drop(delete data),alter (data changing)
+3.DCL[Data Control Language]
+4.DTL[Data Transaction Language]
+
+#MYSQL datatype
+----------------
+string data types
+----------------------
+CHAR (size)
+-----------------
+for ex:CHAR(5)->"abcde"
+
+VARCHAR(size)
+--------------------
+VARCHAR(10)->"a"----->1
+              "ab"---->2
+              "rahim"--->5
+              "-----------"->10
+
+TEXT(size)
+---------------
+TEXT(100)--->"- - - - - - - - - - "
+              "this is darabase course"
+
+
+BLOB(size)
+----------------
+file,image[binary data]
+
+
+#Numeric Data types
+----------------------------
+ INT(size)---->accepted to decimal value
+ for Ex:20
+
+ FLOAT(size)---->accepted fraction value
+ for ex: 20.5,100.9
+
+ DOUBLE(size)--------->accepted to fraction value
+
+
+ #Date TIme related Data type
+ -------------------------------
+ 1.DATE 
+ 2.DATETIME
+ 3.TIMESTAMP
+ 4.YEAR
+
+
+ #SQL Syntax-CREATE,RENAME,DROP table
+ ------------------------------------------
+ ->Not a case Sentitive
+ for ex: select/SELECT 
+        CREATE TABLE/create table
+-> semicolon ;[must be addded end]
+
+@CREATE TABLE
+-----------------
+CREATE DATABASE databaseName;
+USE  databaseName;
+SHOW DATABASE;
+CREATE TABLE student(
+  Roll INT,
+  Name VARCHAR,
+);
+
+=>RENAME TABLE oldName to newName;
+@delete table
+=>DROP table tableName;
+
+
