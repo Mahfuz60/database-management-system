@@ -1,0 +1,81 @@
+#create a table
+----------------------
+CREATE TABLE students(
+  roll INT,
+  name VARCHAR(30),
+  contactNum CHAR(11),
+  email VARCHAR(30)
+);
+
+#Insert a table data
+--------------------------
+syntax:
+INSERT INTO tableName(column1,column2,column3,......)
+VALUES(value1,value2,value3,...........)
+example:
+--------
+ INSERT INTO students(roll,name,contactNum,email)
+ VALUES(101,"faisal ahmed","012334444444","faisal@gmail.com")
+   
+#Constraint(kind of rules)
+-----------------------------
+for example:
+NID->18+
+photo size->max 1MB
+NID Number->unique(primary key)
+phone number->unique
+
+Type of Constraint
+->NOT NULL
+->PRIMARY KEY 
+->UNIQUE 
+->FOREIGN KEY 
+->CHECK 
+->DEFAULT 
+
+##Create table time  Constraint set  in database
+----------------------------------------------------
+1.student roll number=>primary key and unique 
+2.student name=>not null 
+3.student contact number=>unique 
+4.student email=>unique 
+
+@@write a Constraint system
+------------------------------
+1.Roll INT NOT NULL UNIQUE PRIMARY KEY
+
+2.Roll INT,
+  PRIMARY KEY(Roll)
+
+3.Roll INT,
+  CONSTRIENT pk_cons PRIMARY KEY(Roll)
+
+4.Roll INT NOT NULL,
+  UNIQUE(Roll),
+  CONSTRIENT pk_cons PRIMARY KEY(Roll)
+
+example-1:
+CREATE TABLE students(
+  roll INT UNIQUE,
+  name VARCHAR(30) NOT NULL,
+  contactNum CHAR(11) UNIQUE,
+  email VARCHAR(30) UNIQUE,
+
+  CONSTRIENT pk_cons PRIMARY KEY(Roll)
+);
+
+example-2:
+CREATE TABLE students(
+  roll INT UNIQUE,
+  name VARCHAR(30) NOT NULL,
+  contactNum CHAR(11) UNIQUE,
+  email VARCHAR(30) UNIQUE,
+  Age INT NOT NULL,
+
+  CONSTRIENT pk_cons PRIMARY KEY(Roll),
+  UNIQUE(contactNum),
+  CHECK(Age>=18)
+  
+);
+
+
