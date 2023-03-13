@@ -78,4 +78,144 @@ CREATE TABLE students(
   
 );
 
+#Update table and delete table
+----------------------------------
+@@UPDATE 
+------------
+UPDATE  tableName
+SET column1=value1,column2=valuw2
+WHERE condition
+
+example:
+UPDATE  students
+SET Name="khairul islam",contactNum="01122334444"
+WHERE Roll=101;
+
+
+ @@DELETE 
+ ------------
+ DELETE FROM tableName
+ WHERE Roll=101;
+
+ example:
+ DELETE FROM students
+ WHERE Roll=101;
+
+#SELECT statement[data searching]
+------------------------------------
+@@all data searching table
+-----------------------------
+
+SELECT *FROM tableName
+
+ex: SELECT *FROM students;
+
+@@single data searching
+------------------------
+SELECT *FROM students
+WHERE Roll=101;
+
+@@one or two value searching
+--------------------------------
+SELECT Email,Roll FROM students;
+
+
+
+#DISTINCT
+-----------------
+[different type of data show main filtering to repating data avoided]
+
+For example:
+rahim,karim,rahim,maya,riya,maya
+
+SELECT name  =>rahim,karim,rahim,maya,riya,maya
+
+SELECT DISTINCT name   =>rahim,karim,maya,riya [double used name golo filter kore bhad die dibe]
+
+
+#ORDER BY
+--------------
+[Serial by Serial listing ]
+two type:
+1.Ascending[small to large]
+ex:1,2,3,4,5
+syntax:
+SELECT *FROM name;
+ORDER BY person_id ASC;
+2.Descending[large to small]
+ex:5,4,3,2,1
+syntax:
+SELECT *FROM name;
+ORDER BY person_id DESC;
+
+#LIMIT
+---------------------
+syntax:
+LIMIT 10=>1st 10 data 
+LIMIT 10 OFFSET 15 =>1st 15 data pore 10 data 
+or 
+LIMIT 10,15
+
+#Arithmatic Operator
+-------------------------
++,-,*,/,%[mod]
+
+example:
+SELECT 3*5;
+SELECT 5-2;
+SELECT  5%20;
+SELECT 30/12;
+
+#Comparison Operator
+----------------------------
+<,>,<=,>=,==,!=
+
+example:
+question:Which employees has salary of 9k?
+Ans:
+SELECT firstName FROM employees
+WHERE salary=9000;
+
+#Logical AND ,OR
+--------------------
+Which guy name steven and salary 2000?
+ans:
+SELECT *FROM employees
+WHERE firstName="stevn" and salary>=2000; 
+
+give me an employees salary>=20000 or lastName="Austin"
+ans:
+SELECT *FROM employees
+WHERE lastName="Austin OR salary>20000;
+
+#IN,NOT IN,LIKE,AS
+----------------------------
+IN =>
+searching value list modhe ashe kina
+syntax:
+SELECT *FROM employees
+WHERE job_id IN("AC_ACCOUNT","AC_MGR","AD_ASST");
+
+NOT IN=>
+searching value list modhe nai kina
+
+syntax:
+SELECT *FROM employees
+WHERE job_id NOT IN("AC_ACCOUNT","AC_MGR","AD_ASST");
+
+LIKE=>
+patten check "abcd","pqrs","mnqp" atttend to bc which "bc" ashe kina check 
+syntax:
+SELECT *FROM employees
+WHERE firstName LIKE "s%";
+------------------------
+"%s"=>aS die end hoice
+"s%"=> s die start hoice
+"%s%"=>s middle ae ashe
+
+AS=>
+make a alias kind of rename 
+
+
+
 
