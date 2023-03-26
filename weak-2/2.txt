@@ -151,3 +151,6 @@ SELECT job_id,COUNT(*)
 FROM employees
 GROUP BY job_id
 HAVING COUNT(*)>1;
+
+#ALTER TABLE
+-------------------

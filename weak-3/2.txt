@@ -1,0 +1,125 @@
+#Joining Table
+-----------------
+=>Basically two table  are combine to one table 
+
+#JOIN statement
+----------------
+=>Used to ON ,USING keyword
+
+Question:show you employees_id,employees_firstName,department_name
+
+@@@ Doing without JOIN [inefficient,show process]
+------------------------
+SELECT employees.employee_id,employees.first_name,departments.department_name
+FROM employees,departments
+WHERE employees.department_id=departments.department_id;
+OR,
+SELECT E.employee_id,E.first_name,D.department_name
+FROM employees E,departments D
+WHERE E.department_id=D.department_id;
+
+@@Doing with JOIN [efficient,faster]
+-------------------------
+syntex:
+----------
+JOIN USING
+---------------
+SELECT col-1,col-2,.......
+FROM table-1 JOIN table-2 USING(col-2)
+WHERE -----------
+
+EXAMPLE:
+SELECT employees.employee_id,employees.first_name,employees.last_name,departments.department_name
+FROM employees JOIN departments 
+USING(department_id);
+
+OR,
+SELECT e.employee_id,e.first_name,e.last_name,d.department_name
+FROM employees e JOIN departments d 
+USING(department_id);
+
+JOIN ON
+-----------
+SELECT employees.employee_id,employees.first_name,departments.department_name
+FROM employees JOIN departments 
+ON(employees.department_id=departments.department_id);
+
+OR
+SELECT e.employee_id,e.first_name,d.department_name
+FROM employees e JOIN departments d 
+ON(e.department_id=d.department_id);
+
+#SELF JOIN
+---------------
+=>self table one column join to other column
+ex:
+SELECT e.first_name,m.first_name
+*FROM employees e JOIN employees m
+ON(e.manager_id=m.employee_id);
+
+[self join table ae USING use kora jabe na only ON use kora jabe]
+
+#INNER JOIN
+----------------
+[common data in both table]
+
+order_id---------------customer_id
+103308-----------------2
+
+syntex:
+SELECT
+FROM table1
+INNER JOIN table2
+ON(table1.col=table2.col)
+
+
+
+
+
+#LEFT JOIN
+------------
+[left table specific data include, right table similer data include and no data  of all NULL ]
+
+order_id---------------customer_id
+103308-----------------2
+103309-----------------NULL 
+103310-----------------NULL 
+
+syntex:
+SELECT
+FROM table1
+LEFT JOIN table2
+ON(table1.col=table2.col)
+
+
+#RIGHT JOIN
+------------
+[right table specific data include, left table similer data include and no data  of all NULL ]
+
+order_id---------------customer_id
+103308-----------------2
+NULL---------------------1
+NULL---------------------3
+
+syntex:
+SELECT
+FROM table1
+RIGHT JOIN table2
+ON(table1.col=table2.col)
+
+#FULL JOIN
+-------------------
+[two table are all data include]
+
+order_id---------------customer_id
+103308-----------------2
+103309-----------------NULL 
+103310-----------------NULL 
+NULL---------------------1
+NULL---------------------3
+
+syntex:
+SELECT
+FROM table1
+FULL JOIN table2
+ON(table1.col=table2.col)

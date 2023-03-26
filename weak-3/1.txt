@@ -1,0 +1,82 @@
+#SUB QUERY Basic[ONE QUERY ENTER ANTHOER QUERY WORK]
+------------------
+@Search to higher salary with karim
+
+
+SELECT name
+FROM employees
+WHERE salary>(
+  SELECT salary
+  FROM employees
+  WHERE id=101
+);
+
+EXAMPLE:
+-------------
+Q:which get salary less than Dinna?[employee_id=107]
+Ans:
+
+SELECT first-name
+FROM employees
+WHERE salary>(
+  SELECT salary
+  FROM employees
+  WHERE employee_id=107
+
+);
+
+Or,
+SELECT  first_name,last_name,job_id,salary
+FROM employees
+WHERE salary>(
+SELECT salary
+FROM employees
+WHERE employee_id=107
+);
+
+OR,
+SELECT  first_name,last_name,job_id,salary
+FROM employees
+WHERE employee_id !=107 AND salary=(
+			SELECT salary
+			FROM employees
+			WHERE employee_id=107
+);
+
+#Advanced Sub QUERY
+--------------------------
+Ques:Search to employees name get salary to Dinna and other same job_id and higher salary Daniel?
+Ans:
+SELECT first_name
+FROM employees
+WHERE job_id=(
+		SELECT job_id
+        FROM employees
+        WHERE employee_id=107
+        )
+        AND salary >(
+				SELECT salary
+                FROM employees
+                WHERE employee_id=109
+                );
+example-3:
+----------
+SELECT *
+FROM employees E1
+WHERE  3>=(
+  SELECT COUNT (*)
+  FROM employees E2
+  WHERE(E1.salary>E2.salary)
+);
+example-4:
+SELECT last_name
+FROM employees
+WHERE job_id!="IT_PROG"
+AND salary <ANY
+(
+  SELECT salary
+  FROM employees
+  WHERE job_id="IT_PROG"
+
+);
+
