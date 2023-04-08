@@ -123,3 +123,4 @@ SELECT
 FROM table1
 FULL JOIN table2
 ON(table1.col=table2.col)
+
